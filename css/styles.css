@@ -1,0 +1,92 @@
+.reset{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: mooli;
+    src: url("../assets/fonts/Mooli-Regular.ttf");
+}
+body{
+    background-color: rgb(237, 205, 166);
+    border-style: dotted;
+}
+#logo{
+    width: 15%;
+    height: 15%;
+    margin-left: 0%;
+}
+header{
+    display: flex;
+    background-color: bisque;
+    justify-content: space-between;
+    align-items: end;
+}
+a{
+    color:rgb(214, 142, 83);
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: x-large;
+}
+h1{
+    color:brown;
+    font-style: italic;
+    font-size: 50px;
+    text-decoration:underline;
+    height: 25%;
+    text-align: justify;
+    display: inline;
+    padding-left: 25%;
+}
+ul li{
+    color: black;
+    text-align: justify;
+    list-style: disc;
+    padding-right: 30%;
+}
+p{
+   font-family: Georgia;
+   font-size: 100%;
+   font-weight: bolder;
+   text-align: justify;
+   display: inline;
+   padding-right: 20%;
+}
+h2{
+    font-family: Cambria;
+    text-align: left;
+    margin: 5%;
+    font-size: 100%;
+    position: relative;
+}
+footer{
+    color: black;
+    display: inline;
+    font-family: Georgia;
+    font-weight: normal;
+    padding-left: 25%;
+}
+.especial{
+    margin-left: 5%;
+    font-family: mooli;
+    src: url(../assets/fonts/Mooli-Regular.ttf);
+}
+table{
+    border: 1px solid black;
+    margin-left: 30%;
+}
+.tresg{
+    margin-left: 25%;
+}
+.otros{
+    margin-left: 17%;
+}
+.veggie{
+    border-radius: 50%;
+}
+.sintacc{
+    border-radius: 50%;
+}
+.redondeados{
+    border-radius: 50%;
+}
