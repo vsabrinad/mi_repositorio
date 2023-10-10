@@ -12,8 +12,8 @@ body{
     border-style: dotted;
 }
 #logo{
-    width: 15%;
-    height: 15%;
+    width: 10%;
+    height: 10%;
     margin-left: 0%;
 }
 header{
@@ -21,6 +21,7 @@ header{
     background-color: bisque;
     justify-content: space-between;
     align-items: end;
+    margin: 2%;
 }
 a{
     color:rgb(214, 142, 83);
@@ -37,6 +38,9 @@ h1{
     text-align: justify;
     display: inline;
     padding-left: 25%;
+}
+article{
+    padding-left: 5%;
 }
 ul li{
     color: black;
@@ -61,10 +65,12 @@ h2{
 }
 footer{
     color: black;
-    display: inline;
+    background-color: bisque;
+    display: flex;
     font-family: Georgia;
     font-weight: normal;
-    padding-left: 25%;
+    padding-left: 65%;
+    margin: 2%;
 }
 .especial{
     margin-left: 5%;
@@ -80,13 +86,4 @@ table{
 }
 .otros{
     margin-left: 17%;
-}
-.veggie{
-    border-radius: 50%;
-}
-.sintacc{
-    border-radius: 50%;
-}
-.redondeados{
-    border-radius: 50%;
 }
