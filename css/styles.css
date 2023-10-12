@@ -72,7 +72,7 @@ footer{
     padding-left: 65%;
     margin: 2%;
 }
-.especial{
+.anuncio{
     margin-left: 5%;
     font-family: mooli;
     src: url(../assets/fonts/Mooli-Regular.ttf);
@@ -81,7 +81,7 @@ table{
     border: 1px solid black;
     margin-left: 30%;
 }
-.tresg{
+.fotoFamiliar{
     margin-left: 25%;
 }
 .otros{
