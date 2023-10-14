@@ -1,97 +1,45 @@
-.reset{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+.reset {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
+
+body {
+  background-color: rgb(237, 205, 166);
+  border-style: dotted;
+}
+
+header {
+  display: flex;
+  background-color: bisque;
+  justify-content: space-between;
+  align-items: end;
+  margin: 2%;
+}
+header #logo {
+  width: 10%;
+  height: 10%;
+  margin-left: 0%;
+}
+header a {
+  color: rgb(214, 142, 83);
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: large;
+}
+
 @font-face {
-    font-family: mooli;
-    src: url("../assets/fonts/Mooli-Regular.ttf");
+  font-family: mooli;
+  src: url("../assets/fonts/Mooli-Regular.ttf");
 }
-body{
-    background-color: rgb(237, 205, 166);
-    border-style: dotted;
+div h1 .tituloPrincipal {
+  color: brown;
+  font-style: italic;
+  font-size: 50%;
+  text-decoration: underline;
+  height: 25%;
+  display: inline;
+  padding-left: 30%;
 }
-#logo{
-    width: 10%;
-    height: 10%;
-    margin-left: 0%;
-}
-header{
-    display: flex;
-    background-color: bisque;
-    justify-content: space-between;
-    align-items: end;
-    margin: 2%;
-}
-a{
-    color:rgb(214, 142, 83);
-    font-weight: bolder;
-    text-decoration: none;
-    font-size: x-large;
-}
-.tituloPrincipal{
-    color:brown;
-    font-style: italic;
-    font-size: 50px;
-    text-decoration:underline;
-    height: 25%;
-    display: inline;
-    padding-left: 30%;
-}
-.secciones{
-    color: brown;
-    padding-left: 40%;
-}
-article{
-    padding-left: 3%;
-}
-ul li{
-    color: black;
-    text-align: justify;
-    list-style: disc;
-    padding-right: 30%;
-}
-p{
-   font-family: Georgia;
-   font-size: 100%;
-   font-weight: bolder;
-   text-align: justify;
-   display: inline;
-   padding-right: 15%;
-}
-h2{
-    font-family: Cambria;
-    text-align: left;
-    margin: 5%;
-    font-size: 100%;
-    position: relative;
-}
-.cartas{
-    display: flex;
-    justify-content:space-around;
-    
-}
-footer{
-    color: black;
-    background-color: bisque;
-    display: flex;
-    font-family: Georgia;
-    font-weight: normal;
-    padding-left: 60%;
-    margin: 2%;
-}
-.anuncio{
-    margin-left: 5%;
-    font-family: mooli;
-    src: url(../assets/fonts/Mooli-Regular.ttf);
-}
-table{
-    border: 1px solid black;
-    margin-left: 30%;
-}
-.fotoFamiliar{
-    margin-left: 25%;
-}
-.otros{
-    margin-left: 17%;
-}
+
+/*# sourceMappingURL=styles.css.map */
