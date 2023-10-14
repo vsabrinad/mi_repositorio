@@ -28,18 +28,111 @@ header a {
   font-size: large;
 }
 
+article {
+  padding-left: 3%;
+}
+article p {
+  font-family: Georgia;
+  font-size: 100%;
+  font-weight: bolder;
+  text-align: justify;
+  display: inline;
+}
+article ul li {
+  color: black;
+  text-align: justify;
+  list-style: disc;
+  padding-right: 15%;
+}
+
+.cartas {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer {
+  color: black;
+  background-color: bisque;
+  display: flex;
+  font-family: Georgia;
+  font-weight: normal;
+  padding-left: 60%;
+  margin: 2%;
+}
+
+.anuncio {
+  margin-left: 5%;
+  font-family: Georgia;
+}
+
+table {
+  border-style: double;
+  border: 3px solid black;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+}
+table th {
+  border: 3px solid black;
+  padding-left: 2%;
+}
+
+.fotoFamiliar {
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+}
+
 @font-face {
   font-family: mooli;
   src: url("../assets/fonts/Mooli-Regular.ttf");
 }
-div h1 .tituloPrincipal {
+div h1 {
   color: brown;
   font-style: italic;
-  font-size: 50%;
   text-decoration: underline;
-  height: 25%;
   display: inline;
-  padding-left: 30%;
+  padding-left: 20%;
+  font-size: 300%;
+}
+
+.secciones {
+  color: brown;
+  padding-left: 40%;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.seccionesPrimarias {
+  color: brown;
+  font-style: italic;
+  padding-left: 40%;
+}
+
+h2 {
+  font-family: Cambria;
+  text-align: left;
+  margin: 5%;
+  font-size: 100%;
+  position: relative;
+}
+
+h3 {
+  font-family: Cambria;
+  text-align: justify;
+  font-size: medium;
+}
+
+div #container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, 200%);
+}
+
+@media (min-width: 450%) {
+  #container {
+    grid-template-columns: 50% 50%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

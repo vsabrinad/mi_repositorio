@@ -7,56 +7,58 @@
     <meta name="keywords" content="recetas saladas dulcess">
     <link rel="shortcut icon" href="./assets/images/logo del sitio web.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Las Delicias de la Abuela Sof&iacute;a</title>
 </head>
 <body>
-    <header>
-        <img id="logo" width="80" height="80" src="./assets/images/logo del sitio web.jpg" alt="gorro de cocinero">
-        <nav>
-            <a href="./pages/quienessomos.html">¿Qui&eacute;nes somos?</a>
-            <a href="./pages/recetassaladas.html">Salado</a>
-            <a href="./pages/recetasdulces.html">Dulce</a>
-            <a href="./pages/otros.html">Otros</a>
-        </nav>
-    </header> 
-    <main> 
-        <section>
-            <div>
-             <h1 class="tituloPrincipal">Las Delicias de la Abuela Sof&iacute;a</h1>
-            </div>
-            <article class="items">
-               <label>
-                  <img width="80" height="80" src="./assets/images/lamparita.jpg" alt="lamparita amarilla">
-                  <p> ¿SAB&Iacute;AS QUE POD&Eacute;S PARTICIPAR DE NUESTRAS CLASES?</p>
-               </label>
-               <ul>
-                 <li>"D.A.S amor" ofrece una clase por semana en vivo para su comunidad</li>
-                 <li>En la cual se dan distintas t&eacute;cnicas de cocina</li>
-                 <li>&Eacute;stas clases se hacen v&iacute;a zoom los s&aacute;bados de 10 a 12 hs</li>
-                 <li>Para participar, debes llenar el siguiente formulario y listo</li>
-                 <li>V&iacute;a email te llegar&aacute; el enlace con el que ingresar&aacute;s a la plataforma</li>
-                 <li>Recuerda entrar con el mismo nombre con el que te inscribiste</li>
-                 <li>¡TE ESPERAMOS!</li>
-               </ul>
-               <h2>Formulario de Incripci&oacute;n
-                 <form action="procesar-form.php" method="get">
-                 <label for="name">Nombre y Apellido</label>
-                 <input type="text">
-                 <label for="email">Email</label>
-                 <input type="email">
-                 <input type="submit">
-                 </form>
-               </h2>
-            </article>
-        </section>
-    </main>
-    <footer>Seguinos en las redes @D.A.S AMOR
-        <label>
-            <img width="30" src="./assets/images/logo de instagram.jpg" alt="logo de la red social instagram">
-            <img width="30" height="30" src="./assets/images/logo de facebook.jpg" alt="logo de la red social facebook">
-        </label>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <div id="container">
+        <header>
+            <img id="logo" width="80" height="80" src="./assets/images/logo del sitio web.jpg" alt="gorro de cocinero">
+            <nav>
+                <a href="./pages/quienessomos.html">¿Qui&eacute;nes somos?</a>
+                <a href="./pages/recetassaladas.html">Salado</a>
+                <a href="./pages/recetasdulces.html">Dulce</a>
+                <a href="./pages/otros.html">Otros</a>
+            </nav>
+        </header> 
+        <main> 
+            <section>
+                <div>
+                    <h1>Las Delicias de la Abuela Sof&iacute;a</h1>
+                </div>
+                <article class="items">
+                    <label>
+                        <img width="80" height="80" src="./assets/images/lamparita.jpg" alt="lamparita amarilla">
+                        <p> ¿SAB&Iacute;AS QUE POD&Eacute;S PARTICIPAR DE NUESTRAS CLASES?</p>
+                    </label>
+                    <ul>
+                        <li>"D.A.S amor" ofrece una clase por semana en vivo para su comunidad</li>
+                        <li>En la cual se dan distintas t&eacute;cnicas de cocina</li>
+                        <li>&Eacute;stas clases se hacen v&iacute;a zoom los s&aacute;bados de 10 a 12 hs</li>
+                        <li>Para participar, debes llenar el siguiente formulario y listo</li>
+                        <li>V&iacute;a email te llegar&aacute; el enlace con el que ingresar&aacute;s a la plataforma</li>
+                        <li>Recuerda entrar con el mismo nombre con el que te inscribiste</li>
+                        <li>¡TE ESPERAMOS!</li>
+                    </ul>
+                    <h3>Formulario de Incripci&oacute;n
+                        <form action="procesar-form.php" method="get">
+                            <label for="name">Nombre y Apellido</label>
+                            <input type="text">
+                            <label for="email">Email</label>
+                            <input type="email">
+                            <input type="submit">
+                        </form>
+                    </h3>
+                </article>
+            </section>
+        </main>
+        <footer>Seguinos en las redes @D.A.S AMOR
+            <label>
+                <img width="30" height="30" src="./assets/images/logo de instagram.jpg" alt="logo de la red social instagram">
+                <img width="30" height="30" src="./assets/images/logo de facebook.jpg" alt="logo de la red social facebook">
+            </label>
+        </footer>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </div>
 </body>
 </html>

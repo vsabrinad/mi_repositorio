@@ -1,13 +1,34 @@
 div{
     h1{
-        .tituloPrincipal{
-            color: brown;
-            font-style: italic;
-            font-size: 50%;
-            text-decoration: underline;
-            height: 25%;
-            display: inline;
-            padding-left: 30%;
-        }
+        color: brown;
+        font-style: italic;
+        text-decoration: underline;
+        display: inline;
+        padding-left: 20%;
+        font-size: 300%;
     }
+}
+.secciones{
+    color: brown;
+    padding-left: 40%;
+    font-style: italic;
+    text-decoration: underline;
+
+}
+.seccionesPrimarias{
+    color: brown;
+    font-style: italic;
+    padding-left:40% ;
+}
+h2{
+    font-family: Cambria;
+    text-align: left;
+    margin: 5%;
+    font-size: 100%;
+    position: relative;
+}
+h3{
+    font-family: Cambria;
+    text-align: justify;
+    font-size: medium;
 }

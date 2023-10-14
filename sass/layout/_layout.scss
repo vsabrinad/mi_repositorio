@@ -25,3 +25,54 @@ header{
         font-size: large;
     }
 }
+article{
+    padding-left: 3%;
+    p{
+        font-family: Georgia;
+        font-size: 100%;
+        font-weight: bolder;
+        text-align: justify;
+        display: inline;
+    }
+    ul{
+        li{
+        color: black;
+        text-align: justify;
+        list-style: disc;
+        padding-right: 15%;
+       }
+    }
+}
+.cartas{
+    display: flex;
+    justify-content: space-around;
+}
+footer{
+    color: black;
+    background-color: bisque;
+    display: flex;
+    font-family: Georgia;
+    font-weight: normal;
+    padding-left: 60%;
+    margin: 2%;
+}
+.anuncio{
+    margin-left: 5%;
+    font-family: Georgia;
+}
+table{
+    border-style: double;
+    border: 3px solid black;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    th{
+        border: 3px solid black;
+        padding-left: 2%;
+    }
+}
+.fotoFamiliar{
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+}
