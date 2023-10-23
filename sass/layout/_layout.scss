@@ -6,6 +6,7 @@
 body{
     background-color: rgb(237, 205, 166);
     border-style: dotted;
+    height: auto;
 }
 header{
     display: flex;
@@ -23,7 +24,6 @@ header{
         font-weight: bolder;
         text-decoration: none;
         font-size: large;
-        border: 1% solid orange;
     }
 }
 article{
