@@ -23,6 +23,7 @@ header{
         font-weight: bolder;
         text-decoration: none;
         font-size: large;
+        border: 1% solid orange;
     }
 }
 article{
@@ -31,16 +32,21 @@ article{
         font-family: Georgia;
         font-size: 100%;
         font-weight: bolder;
-        text-align: justify;
+        text-align: left;
         display: inline;
     }
     ul{
         li{
         color: black;
-        text-align: justify;
+        text-align: left;
         list-style: disc;
         padding-right: 15%;
        }
+    }
+    .fotoFamiliar{
+        margin-left: 20%;
+        margin-right: 20%;
+        text-align: center;
     }
 }
 .cartas{
@@ -70,9 +76,4 @@ table{
         border: 3px solid black;
         padding-left: 2%;
     }
-}
-.fotoFamiliar{
-    margin-left: 20%;
-    margin-right: 20%;
-    text-align: center;
 }
