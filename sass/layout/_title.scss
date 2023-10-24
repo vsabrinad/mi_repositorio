@@ -4,13 +4,13 @@ div{
         font-style: italic;
         text-decoration: underline;
         display: inline;
-        padding-left: 20%;
-        font-size: 300%;
+        font-size: 150%;
+        text-align: justify;
+        padding-left: 15%;
     }
 }
 .secciones{
     color: brown;
-    padding-left: 40%;
     font-style: italic;
     text-decoration: underline;
 
@@ -18,17 +18,18 @@ div{
 .seccionesPrimarias{
     color: brown;
     font-style: italic;
-    padding-left:40% ;
+    text-align: justify;
 }
 h2{
-    font-family: Cambria;
-    text-align: left;
+    font-family: Georgia;
+    text-align: justify;
     margin: 5%;
     font-size: 100%;
     position: relative;
+
 }
 h3{
-    font-family: Cambria;
+    font-family: Georgia;
     text-align: justify;
     font-size: medium;
 }

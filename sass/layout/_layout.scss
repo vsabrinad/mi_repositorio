@@ -43,15 +43,11 @@ article{
         padding-right: 15%;
        }
     }
-    .fotoFamiliar{
-        margin-left: 20%;
-        margin-right: 20%;
-        text-align: center;
-    }
 }
 .cartas{
     display: flex;
     justify-content: space-around;
+    margin-left: 10%;
 }
 footer{
     color: black;
@@ -59,7 +55,6 @@ footer{
     display: flex;
     font-family: Georgia;
     font-weight: normal;
-    padding-left: 60%;
     margin: 2%;
 }
 .anuncio{
@@ -68,12 +63,22 @@ footer{
 }
 table{
     border-style: double;
-    border: 3px solid black;
-    margin-left: 20%;
+    border: 3px solid ;
+    margin-left: 10%;
     margin-right: 20%;
     text-align: center;
-    th{
-        border: 3px solid black;
-        padding-left: 2%;
+    padding-right: 5%;
+    tr{
+        padding: 5%;
     }
+    th{
+        border: 3px solid brown;
+    }
+}
+.fotoFamiliar{
+    width: 50%;
+    height: 30%;
+    padding: 5%;
+    text-align: left;
+    margin-left: 10%;
 }
