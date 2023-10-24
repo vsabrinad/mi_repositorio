@@ -10,20 +10,24 @@ body{
 }
 header{
     display: flex;
-    background-color: bisque;
+    align-items: center;
     justify-content: space-between;
-    align-items: end;
-    margin: 2%;
+    background-color: bisque;
     #logo{
-        width: 10%;
-        height: 10%;
-        margin-left: 0%;
+        width: 150%;
     }
     a{
         color: rgb(214, 142, 83);
         font-weight: bolder;
         text-decoration: none;
-        font-size: large;
+        padding: 15%;
+        
+    }
+    &:hover{
+        background-color: chocolate;
+        border: 1% solid brown;
+        color: brown;
+        box-shadow:0 0 20% brown;
     }
 }
 article{
