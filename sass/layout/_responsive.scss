@@ -11,3 +11,8 @@ div{
         grid-template-rows: 50%, 50%;
     }
 }
+@media(min-width: 1024%){
+    .cartas{
+        grid-template-columns: 50%, 50%;
+    }
+}

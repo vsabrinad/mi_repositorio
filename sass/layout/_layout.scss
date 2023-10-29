@@ -9,21 +9,23 @@ body{
     height: auto;
 }
 header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: bisque;
+    margin: 2%;
     #logo{
-        width: 150%;
+        display: flex;
     }
-    a{
+    nav{
+        display: flex;
+    }
+    .pagina{
+        display: flex;
+        justify-content: baseline;
         color: rgb(214, 142, 83);
         font-weight: bolder;
         text-decoration: none;
-        padding: 15%;
-        
+        padding: 3%;
     }
-    &:hover{
+    .pagina:hover{
         background-color: chocolate;
         border: 1% solid brown;
         color: brown;
@@ -37,7 +39,7 @@ article{
         font-size: 100%;
         font-weight: bolder;
         text-align: left;
-        display: inline;
+        display: inline-flex;
     }
     ul{
         li{
@@ -47,10 +49,14 @@ article{
         padding-right: 15%;
        }
     }
+    label{
+        display: block;
+    }
 }
 .cartas{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 3%;
     margin-left: 10%;
 }
 footer{
@@ -62,6 +68,7 @@ footer{
     margin: 2%;
 }
 .anuncio{
+    display: inline-block;
     margin-left: 5%;
     font-family: Georgia;
 }

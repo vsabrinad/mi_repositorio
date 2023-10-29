@@ -11,22 +11,28 @@ body {
 }
 
 header {
-  display: flex;
   background-color: bisque;
-  justify-content: space-between;
-  align-items: end;
   margin: 2%;
 }
 header #logo {
-  width: 10%;
-  height: 10%;
-  margin-left: 0%;
+  display: flex;
 }
-header a {
+header nav {
+  display: flex;
+}
+header .pagina {
+  display: flex;
+  justify-content: baseline;
   color: rgb(214, 142, 83);
   font-weight: bolder;
   text-decoration: none;
-  font-size: large;
+  padding: 3%;
+}
+header .pagina:hover {
+  background-color: chocolate;
+  border: 1% solid brown;
+  color: brown;
+  box-shadow: 0 0 20% brown;
 }
 
 article {
@@ -37,7 +43,7 @@ article p {
   font-size: 100%;
   font-weight: bolder;
   text-align: left;
-  display: inline;
+  display: inline-flex;
 }
 article ul li {
   color: black;
@@ -45,10 +51,14 @@ article ul li {
   list-style: disc;
   padding-right: 15%;
 }
+article label {
+  display: block;
+}
 
 .cartas {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  justify-content: center;
+  grid-template-areas: 3%;
   margin-left: 10%;
 }
 
@@ -62,6 +72,7 @@ footer {
 }
 
 .anuncio {
+  display: inline-block;
   margin-left: 5%;
   font-family: Georgia;
 }
@@ -93,14 +104,14 @@ table th {
   font-family: mooli;
   src: url("../assets/fonts/Mooli-Regular.ttf");
 }
-div h1 {
+h1 {
   color: brown;
   font-style: italic;
   text-decoration: underline;
   display: inline;
-  font-size: 150%;
+  font-size: 125%;
   text-align: justify;
-  padding-left: 15%;
+  padding-left: 5%;
 }
 
 .secciones {
@@ -139,6 +150,11 @@ div #container {
   #container {
     grid-template-columns: 100%;
     grid-template-rows: 50%, 50%;
+  }
+}
+@media (min-width: 1024%) {
+  .cartas {
+    grid-template-columns: 50%, 50%;
   }
 }
 
