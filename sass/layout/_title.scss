@@ -1,11 +1,21 @@
 h1{
+    color: brown;
+    font-style: italic;
+    text-decoration: underline;
+    display: inline;
+    font-size: 150%;
+    text-align: justify;
+    padding-left: 35%;
+    #tituloProncipal{
         color: brown;
         font-style: italic;
         text-decoration: underline;
         display: inline;
         font-size: 125%;
         text-align: justify;
-        padding-left: 5%;
+        padding-left: 20%; 
+
+    }
 }
 .secciones{
     color: brown;

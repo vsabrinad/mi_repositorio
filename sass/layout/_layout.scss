@@ -23,7 +23,7 @@ header{
         color: rgb(214, 142, 83);
         font-weight: bolder;
         text-decoration: none;
-        padding: 3%;
+        padding: 5%;
     }
     .pagina:hover{
         background-color: chocolate;
@@ -33,7 +33,7 @@ header{
     }
 }
 article{
-    padding-left: 3%;
+    padding: 3%;
     p{
         font-family: Georgia;
         font-size: 100%;
@@ -87,9 +87,9 @@ table{
     }
 }
 .fotoFamiliar{
-    width: 50%;
-    height: 30%;
+    width: 80%;
+    height: 50%;
     padding: 5%;
-    text-align: left;
-    margin-left: 10%;
+    padding-left: 5%;
+    margin-left: 5%;
 }

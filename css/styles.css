@@ -26,7 +26,7 @@ header .pagina {
   color: rgb(214, 142, 83);
   font-weight: bolder;
   text-decoration: none;
-  padding: 3%;
+  padding: 5%;
 }
 header .pagina:hover {
   background-color: chocolate;
@@ -36,7 +36,7 @@ header .pagina:hover {
 }
 
 article {
-  padding-left: 3%;
+  padding: 3%;
 }
 article p {
   font-family: Georgia;
@@ -93,11 +93,11 @@ table th {
 }
 
 .fotoFamiliar {
-  width: 50%;
-  height: 30%;
+  width: 80%;
+  height: 50%;
   padding: 5%;
-  text-align: left;
-  margin-left: 10%;
+  padding-left: 5%;
+  margin-left: 5%;
 }
 
 @font-face {
@@ -109,9 +109,18 @@ h1 {
   font-style: italic;
   text-decoration: underline;
   display: inline;
+  font-size: 150%;
+  text-align: justify;
+  padding-left: 35%;
+}
+h1 #tituloProncipal {
+  color: brown;
+  font-style: italic;
+  text-decoration: underline;
+  display: inline;
   font-size: 125%;
   text-align: justify;
-  padding-left: 5%;
+  padding-left: 20%;
 }
 
 .secciones {
