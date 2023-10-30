@@ -19,14 +19,14 @@ header #logo {
 }
 header nav {
   display: flex;
+  justify-content: space-around;
 }
 header .pagina {
   display: flex;
-  justify-content: baseline;
   color: rgb(214, 142, 83);
   font-weight: bolder;
   text-decoration: none;
-  padding: 5%;
+  padding: 3%;
 }
 header .pagina:hover {
   background-color: chocolate;
