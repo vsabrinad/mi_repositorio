@@ -58,8 +58,11 @@ article label {
 .cartas {
   display: grid;
   justify-content: center;
-  grid-template-areas: 3%;
-  margin-left: 10%;
+}
+@media (min-width: 768px) {
+  .cartas {
+    grid-template-columns: 50px, 50px;
+  }
 }
 
 footer {
@@ -93,8 +96,8 @@ table th {
 }
 
 .fotoFamiliar {
-  width: 80%;
-  height: 50%;
+  width: 70%;
+  height: 40%;
   padding: 5%;
   padding-left: 5%;
   margin-left: 5%;
@@ -111,7 +114,8 @@ h1 {
   display: inline;
   font-size: 150%;
   text-align: justify;
-  padding-left: 35%;
+  justify-content: center;
+  padding-left: 40%;
 }
 h1 #tituloProncipal {
   color: brown;
@@ -149,21 +153,16 @@ h3 {
   font-size: medium;
 }
 
-div #container {
+#container {
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: repeat(4, 200%);
+  grid-template-columns: 50%, 50%;
+  grid-template-rows: repeat(auto);
 }
 
 @media (min-width: 320%) {
   #container {
     grid-template-columns: 100%;
     grid-template-rows: 50%, 50%;
-  }
-}
-@media (min-width: 1024%) {
-  .cartas {
-    grid-template-columns: 50%, 50%;
   }
 }
 

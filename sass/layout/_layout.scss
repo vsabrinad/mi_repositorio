@@ -58,8 +58,9 @@ article{
 .cartas{
     display: grid;
     justify-content: center;
-    grid-template-areas: 3%;
-    margin-left: 10%;
+    @media(min-width: 768px){
+        grid-template-columns: 50px, 50px;
+    }
 }
 footer{
     color: black;
@@ -89,8 +90,8 @@ table{
     }
 }
 .fotoFamiliar{
-    width: 80%;
-    height: 50%;
+    width: 70%;
+    height: 40%;
     padding: 5%;
     padding-left: 5%;
     margin-left: 5%;
