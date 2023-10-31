@@ -42,10 +42,11 @@ article{
         font-weight: bolder;
         text-align: left;
         display: inline-flex;
+        color: darkred;
     }
     ul{
         li{
-        color: black;
+        color: brown;
         text-align: left;
         list-style: disc;
         padding-right: 15%;
@@ -53,17 +54,26 @@ article{
     }
     label{
         display: block;
+        color: brown;
     }
-}
-.cartas{
-    display: grid;
-    justify-content: center;
-    @media(min-width: 768px){
-        grid-template-columns: 50px, 50px;
+    .rectangulo{
+        background-color: bisque;
+        border: 1% solid brown;
+    }
+    .bottom{
+        background-color: bisque;
+        color: brown;
+        border-radius: 3% solid bisque;
+    }
+    .bottom:hover{
+        background-color: chocolate;
+        border: 1% solid brown;
+        color: brown;
+        box-shadow:0 0 20% brown;
     }
 }
 footer{
-    color: black;
+    color: brown;
     background-color: bisque;
     display: flex;
     font-family: Georgia;
@@ -82,11 +92,12 @@ table{
     margin-right: 20%;
     text-align: center;
     padding-right: 5%;
+    color: brown;
     tr{
         padding: 5%;
     }
     th{
-        border: 3px solid brown;
+        border: 3px solid burlywood;
     }
 }
 .fotoFamiliar{

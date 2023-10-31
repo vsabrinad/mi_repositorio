@@ -44,29 +44,36 @@ article p {
   font-weight: bolder;
   text-align: left;
   display: inline-flex;
+  color: darkred;
 }
 article ul li {
-  color: black;
+  color: brown;
   text-align: left;
   list-style: disc;
   padding-right: 15%;
 }
 article label {
   display: block;
+  color: brown;
 }
-
-.cartas {
-  display: grid;
-  justify-content: center;
+article .rectangulo {
+  background-color: bisque;
+  border: 1% solid brown;
 }
-@media (min-width: 768px) {
-  .cartas {
-    grid-template-columns: 50px, 50px;
-  }
+article .bottom {
+  background-color: bisque;
+  color: brown;
+  border-radius: 3% solid bisque;
+}
+article .bottom:hover {
+  background-color: chocolate;
+  border: 1% solid brown;
+  color: brown;
+  box-shadow: 0 0 20% brown;
 }
 
 footer {
-  color: black;
+  color: brown;
   background-color: bisque;
   display: flex;
   font-family: Georgia;
@@ -87,12 +94,13 @@ table {
   margin-right: 20%;
   text-align: center;
   padding-right: 5%;
+  color: brown;
 }
 table tr {
   padding: 5%;
 }
 table th {
-  border: 3px solid brown;
+  border: 3px solid burlywood;
 }
 
 .fotoFamiliar {
@@ -140,6 +148,7 @@ h1 #tituloProncipal {
 }
 
 h2 {
+  color: brown;
   font-family: Georgia;
   text-align: justify;
   margin: 5%;
@@ -148,9 +157,22 @@ h2 {
 }
 
 h3 {
+  color: brown;
   font-family: Georgia;
   text-align: justify;
   font-size: medium;
+  text-decoration: underline;
+}
+
+.card-title {
+  color: brown;
+  font-family: Georgia;
+}
+
+.items {
+  color: brown;
+  background-color: bisque;
+  font-family: Georgia;
 }
 
 #container {
@@ -163,6 +185,11 @@ h3 {
   #container {
     grid-template-columns: 100%;
     grid-template-rows: 50%, 50%;
+  }
+}
+@media (min-width: 768%) {
+  #container-fluid {
+    grid-template-columns: 50%, 50%;
   }
 }
 

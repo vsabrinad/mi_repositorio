@@ -30,6 +30,7 @@ h1{
     text-align: justify;
 }
 h2{
+    color: brown;
     font-family: Georgia;
     text-align: justify;
     margin: 5%;
@@ -38,7 +39,18 @@ h2{
 
 }
 h3{
+    color: brown;
     font-family: Georgia;
     text-align: justify;
     font-size: medium;
+    text-decoration: underline;
+}
+.card-title{
+    color: brown;
+    font-family: Georgia;
+}
+.items{
+    color: brown;
+    background-color: bisque;
+    font-family: Georgia;
 }
