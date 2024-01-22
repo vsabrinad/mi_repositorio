@@ -1,5 +1,5 @@
-/*function solicitarNombreYApellido(){
-   let nombreApellido = prompt ("Ingresar nombre y apellido.").toLowerCase();
+function solicitarNombreYApellido(){
+   let nombreApellido = prompt ("Ingresar nombre y apellido.");
    if ((nombreApellido.trim != "")){
       alert("Nombre y apellido: " + nombreApellido);
       mostrarMenuDeInscripcion();
@@ -16,9 +16,9 @@ solicitarNombreYApellido()
  
  nombreApellido.trim != "" ? alert("Nombre y Apellido: " + nombreApellido) : alert("¡Nombre y Apellido obligatorio!");
 */
- /*
+ 
 function mostrarMenuDeInscripcion(){
-   let inscripcion = prompt ("Se dan 100 cupos por clase. Elija una clase: MARTES o JUEVES").toLowerCase();
+   let inscripcion = prompt ("Se dan 100 cupos por clase. Elija una clase: MARTES o JUEVES");
    if ((inscripcion.trim === "martes")){
       alert("Iniciando su reserva.");
       mostrarMenuDeOpcionesDeMartes();
@@ -30,11 +30,11 @@ function mostrarMenuDeInscripcion(){
 mostrarMenuDeInscripcion()
  
 function mostrarMenuDeOpcionesDeMartes(){
-   let mensaje = prompt("10hs: clase de RECETA SALADA o 12hs: clase RECETA DULCE. Elija la clase.").toLowerCase();
-   if (mensaje === "receta dulce") {
+   let mensaje = prompt("10hs: clase de RECETA SALADA o 12hs: clase RECETA DULCE. Elija la clase.");
+   if (mensaje.trim === "receta dulce") {
       alert("¡Excelente!");
       mostrarOpcionMasVotada();
-   } else if (mensaje === "receta salada") {
+   } else if (mensaje.trim === "receta salada") {
       alert("¡Excelente!");
       mostrarOpcionMasVotada();
    } else {
@@ -45,7 +45,7 @@ function mostrarMenuDeOpcionesDeMartes(){
 mostrarMenuDeOpcionesDeMartes()
  
 function mostrarMenuDeOpcionesDeJueves(){
-   let mensaje = prompt("10hs: clase de RECETA SALADA o 12hs: clase RECETA DULCE. Elija la clase.").toLowerCase();
+   let mensaje = prompt("10hs: clase de RECETA SALADA o 12hs: clase RECETA DULCE. Elija la clase.");
    if (mensaje === "receta dulce") {
       alert("Excelente.");
       mostrarOpcionMasVotada();
@@ -93,9 +93,8 @@ function mostrarfinalizacionDelFormulario(){
    } 
 }
  
-//Profe: A partir de aca es sobre la segunda. 
  
-// VERIFICACIONES
+ 
  
 const inscriptosMartes = [ "susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
     "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa"];
@@ -149,16 +148,45 @@ encontrados.forEach(item => {
 })
  
 const claseMartes = new Date ("january 16, 2024");
-//console.log(claseMartes);
-//console.log(claseMartes.getFullYear());
+console.log(claseMartes);
+console.log(claseMartes.getFullYear());
 const hoy = new Date ("january 12, 2024");
 const miliSegundosPorDia = 86400000
 console.log((claseMartes - hoy) / miliSegundosPorDia);
- 
-//Profe: A partir de aca es sobre la tercera. 
-*/
-let boton = document.getElementsByClassName("bottom");
-const responder = () => {
-   console.log("Hola. Has hecho click");
-}
-boton.addEventListener("click");
+
+//Profe: A partir de aca es sobre la tercera junto con lo de DOM que esta en el otro archivo
+
+let boton= document.getElementsByClassName("bottom");
+const respuesta= () =>{
+   console.log("Has hecho click");
+};
+boton.addEventListener("click", respuesta);
+
+
+
+let formulario = document.getElementById("formulario");
+
+formulario.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let inputs = e.target.children;
+  if (!inputs[0].value.includes("@")) {
+    inputs[0].value = "";
+    alert("Debe contener el @");
+  }
+});
+
+
+
+localStorage.setItem("objeto", {nombre: "melisa", dia: "martes", horario: 10, receta: "salada"});
+
+
+let inscripto = localStorage.getItem("nombre");
+console.log("nombre");
+
+
+let persona1 = {nombre: "susana", dia: "martes"};
+let persona1Json = JSON.stringify(persona1)
+console.log(persona1Json);
+
+

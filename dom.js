@@ -1,4 +1,4 @@
-/*let saludar = document.getElementById("ingreso a la pag web");
+let saludar = document.getElementById("ingreso a la pag web");
 let seccion = prompt ("Ingrese la seccion a ingresar");
 
 if (seccion === "formulario"){
@@ -14,4 +14,3 @@ if (seccion === "formulario"){
     saludar.innerHTML = `<h1>Bienvenidos a ${seccion}</h1>`;
     saludar.className = "marron";
 }
-*/

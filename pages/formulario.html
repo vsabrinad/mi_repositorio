@@ -15,6 +15,7 @@
         <header>
             <img id="logo" width="80" height="80" src="../assets/images/logo del sitio web.jpg" alt="gorro de cocinero">
             <nav>
+                <a class="pagina" href="../index.html">Inicio</a>
                 <a class="pagina" href="./pages/quienessomos.html">¿Qui&eacute;nes somos?</a>
                 <a class="pagina" href="./pages/recetassaladas.html">Recetas Saladas</a>
                 <a class="pagina" href="./pages/recetasdulces.html">Recetas Dulces</a>
@@ -24,21 +25,38 @@
         <main>
             <div class="main">
                 <h1 id="tituloPrincipal">Delicias de la Abuela Sof&iacute;a</h1>
-                <h2 id="formulario1">Formulario de Incripci&oacute;n
-                    <br>
-                    <br>
-                    <form action="procesar-form.php" method="get">
-                        <label for="name">Nombre y Apellido</label>
-                        <input class="rectangulo" type="text">
+                <div id="PlanillaDeInscripcion">
+                    <h2 id="formulario1">FORMULARIO DE INSCRIPCI&Oacute;N
                         <br>
                         <br>
-                        <label for="email">Email</label>
-                        <input class="rectangulo" type="email">
-                        <br>
-                        <br>
-                        <input id="boton" type="submit">
-                    </form>
-                </h2>
+                        <form>
+                            <label for="name">- Ingrese su nombre y apellido:</label>
+                            <input class="rectangulo" type="text">
+                            <br>
+                            <br>
+                            <label for="dia">-Elija su clase: Martes o Jueves.</label>
+                            <input class="rectangulo" type="text">
+                            <br>
+                            <br>
+                            <label for="horario">- 10hs Recetas Saldas. 
+                                                 - 12hs Recetas Dulces. 
+                                                 Elija un tipo de receta:</label>
+                            <input class="rectangulo" type="text">
+                            <br>
+                            <br>
+                            <label for="votacion">¡Encuesta! 
+                                                Usted quiere que la clase se base en SINTACC, COMUN o VEGGIE.</label>
+                            <input class="rectangulo" type="text">
+                            <br>
+                            <br>
+                            <label for="email">- Ingrese su correo electronico:</label>
+                            <input class="rectangulo" type="email">
+                            <br>
+                            <br>
+                            <input id="formulario" type="submit" value="Enviar">
+                        </form>
+                    </h2>
+                </div>
             </div>
         </main>
         <footer class="footer">Segu&iacute; @D.A.S AMOR en
