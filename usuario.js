@@ -1,21 +1,21 @@
-/*function solicitarNombreYApellido(){
-   let nombreApellido = prompt ("Ingresar nombre y apellido.");
-   if ((nombreApellido.trim != "")){
+function solicitarNombreYApellido(){
+   let nombreApellido = prompt ("Ingrese su nombre y apellido:");
+   if ((nombreApellido.trim =! "")){
       alert("Nombre y apellido: " + nombreApellido);
       mostrarMenuDeInscripcion();
    } else {
-      alert("¡Nombre y Apellido obligatorio!");
+      alert("¡Nombre y apellido obligatorio!");
       solicitarNombreYApellido();
    }
 }
-solicitarNombreYApellido()
+mostrarMenuDeInscripcion()
 
 //PROFE: ACA LE DI UN EJEMPLO UTILIZANDO LA FUNCION DE ARRIBA SOBRE EL USO DEL OPERADOR TERNARIO.
  
- let nombreApellido = prompt ("Ingresar nombre y apellido.").toLowerCase();
+ /*let nombreApellido = prompt ("Ingresar nombre y apellido.").toLowerCase();
  
  nombreApellido.trim != "" ? alert("Nombre y Apellido: " + nombreApellido) : alert("¡Nombre y Apellido obligatorio!");
-
+*/
  
 function mostrarMenuDeInscripcion(){
    let inscripcion = prompt ("Se dan 100 cupos por clase. Elija una clase: MARTES o JUEVES");
@@ -153,55 +153,16 @@ console.log(claseMartes.getFullYear());
 const hoy = new Date ("january 12, 2024");
 const miliSegundosPorDia = 86400000
 console.log((claseMartes - hoy) / miliSegundosPorDia);
-/*
-//Profe: A partir de aca es sobre la tercera junto con lo de DOM que esta en el otro archivo
-
-let boton= document.getElementsByClassName("bottom");
-const respuesta= () =>{
-   console.log("Has hecho click");
-};
-boton.addEventListener("click", respuesta);
-
-
-
-let formulario = document.getElementById("formulario");
-
-formulario.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  let inputs = e.target.children;
-  if (!inputs[0].value.includes("@")) {
-    inputs[0].value = "";
-    alert("Debe contener el @");
-  }
-});
-
-
-
-localStorage.setItem("objeto", {nombre: "melisa", dia: "martes", horario: 10, receta: "salada"});
-
 
 let inscripto = localStorage.getItem("nombre");
 console.log("nombre");
-
-
 let persona1 = {nombre: "susana", dia: "martes"};
 let persona1Json = JSON.stringify(persona1)
 console.log(persona1Json);
-*/
+let persona2 = {nombre: "sofia", dia: "martes"};
+let persona2Json = JSON.stringify(persona2)
+console.log(persona2Json);
 
 
 
 
-const form = document.getElementById("form");
-form.addEventListener("submit", userName)
-
-function c(e){
-   e.preventDefault();
-
-   const verificarInscripcion = form["usarName"].value ;
-   const  userName = {
-      name: userName,
-   }
-   console.log(user);
-}
