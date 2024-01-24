@@ -8,8 +8,6 @@
     <link rel="shortcut icon" href="./assets">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
-    <link href="./usuario.js">
-    <link href="./dom.js">
     <title>Delicias de la Abuela Sof&iacute;a</title>
 </head>
 <body>
@@ -41,13 +39,13 @@
                         <h3 class="formulario">Verificacion de Incripci&oacute;n
                             <br>
                             <br>
-                            <form action="procesar-form.php" method="get">
-                                <label for="name">Nombre y Apellido</label>
-                                <input class="rectangulo" type="text">
+                            <form id="form">
+                                <label for="userName">Nombre y Apellido</label>
+                                <input name="userName" class="rectangulo" type="text">
                                 <br>
                                 <br>
                                 <label for="email">Correo electronico</label>
-                                <input class="rectangulo" type="email">
+                                <input name="email" class="rectangulo" type="email">
                                 <br>
                                 <br>
                                 <button class="bottom" type="submit">Enviar</button>
