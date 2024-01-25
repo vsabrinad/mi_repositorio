@@ -1,6 +1,6 @@
-console.log(document);
-
-/*let saludar = document.getElementById("ingreso a la pag web");
+console.log(document.body);
+/*
+let saludar = document.getElementById("ingreso a la pag web");
 let seccion = prompt ("Ingrese la seccion a ingresar");
 
 if (seccion === "formulario"){
@@ -17,4 +17,4 @@ if (seccion === "formulario"){
     saludar.className = "marron";
 }
 */
-
+ 
