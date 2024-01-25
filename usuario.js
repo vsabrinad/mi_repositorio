@@ -1,18 +1,16 @@
-function solicitarNombreYApellido(){
-   let input1  = document.getElementById("name")
-   input1.addEventListener("input", () => {
-   console.log(input1.value)
-   })
-   let solicitarNombreYApellido = localStorage.setItem("createUser")
-   if ((nombreYApellido.trim =! " ")){
-      //alert("Nombre y apellido: " + nombreApellido);
-      mostrarMenuDeInscripcion();
-   } else {
-      alert("¡Nombre y apellido obligatorio!");
-      solicitarNombreYApellido();
+function solicitarNombreApellido(){
+   let input  = document.getElementById("name")
+   input.addEventListener("input", () =>
+   console.log(input.value));
+
+   let solicitarNombreApellido = localStorage.setItem("createUser", "name");
+   console.log(solicitarNombreApellido);
+   if ((nombreYApellido =! " ")){
+      } else {
    }
 }
-solicitarNombreYApellido()
+solicitarNombreApellido()
+
 
 //PROFE: ACA LE DI UN EJEMPLO UTILIZANDO LA FUNCION DE ARRIBA SOBRE EL USO DEL OPERADOR TERNARIO.
 /*let nombreApellido = prompt ("Ingresar nombre y apellido.").toLowerCase();
@@ -20,81 +18,64 @@ nombreApellido.trim != "" ? alert("Nombre y Apellido: " + nombreApellido) : aler
 */
 
 function mostrarMenuDeInscripcion(){
-   let input2  = document.getElementById("dia")
-   input2.addEventListener("input", () => {
-   console.log(input2.value)
-   })
-   let inscripcion =  localStorage.setItem("menuDeInscripcion");                 //prompt ("Se dan 100 cupos por clase. Elija una clase: MARTES o JUEVES");
+   let input  = document.getElementById("dia")
+   input.addEventListener("input",  () =>
+   console.log(input.value));
+
+   let inscripcion =  localStorage.setItem("menuDeInscripcion", "dia"); 
+   console.log(inscripcion);             
    if ((inscripcion.trim === "martes")){
-      //alert("Iniciando su reserva.");
-      mostrarMenuDeOpcionesDeMartes();
    } else ((inscripcion.trim === "jueves")); {
-      //alert("Iniciando su reserva.");
-      mostrarMenuDeOpcionesDeJueves();
-   }
+    }
 }
 mostrarMenuDeInscripcion()
 
 function mostrarMenuDeOpcionesDeMartes(){
-   let input3  = document.getElementById("horario")
-   input3.addEventListener("input", () => {
-   console.log(input3.value)
-   })
-   let mensaje = localStorage.setItem("opcionesMartes");                              //prompt("10hs: clase de RECETA SALADA o 12hs: clase RECETA DULCE. Elija la clase.");
+   let input  = document.getElementById("horario");
+   input.addEventListener("input", () => 
+   console.log(input.value));
+
+   let mensaje = localStorage.setItem("opcionesMartes", "horario");
+   console.log(mensaje);
    if (mensaje.trim === "receta dulce") {
-      //alert("¡Excelente!");
-      mostrarOpcionMasVotada();
    } else if (mensaje.trim === "receta salada") {
-      //alert("¡Excelente!");
-      mostrarOpcionMasVotada();
    } else {
       alert("Opcion incorrecta (receta dulce/ receta salada).");
-      mostrarMenuDeOpcionesDeMartes();
    }
 }
 mostrarMenuDeOpcionesDeMartes()
 
 function mostrarMenuDeOpcionesDeJueves(){
-   let input4  = document.getElementById("horario")
-   input4.addEventListener("input", () => {
-   console.log(input4.value)
-   })
-   let mensaje = localStorage.setItem("opcionJueves");                   //prompt("10hs: clase de RECETA SALADA o 12hs: clase RECETA DULCE. Elija la clase.");
+   let input  = document.getElementById("horario")
+   input.addEventListener("input", () => 
+   console.log(input.value));
+   
+   let mensaje = localStorage.setItem("opcionJueves", "horario")
+   console.log(mensaje);                   
    if (mensaje === "receta dulce") {
-      //alert("Excelente.");
-      mostrarOpcionMasVotada();
    } else if (mensaje === "receta salada") {
-      //alert("Excelente.");
-      mostrarOpcionMasVotada();
    } else {
-     alert ("Opcion incorrecta. Elija receta dulce o receta salada, por favor.)");
-      mostrarMenuDeOpcionesDeJueves();
+     alert ("Opcion incorrecta. Elija receta dulce o receta salada, por favor.)"); 
    }
 }
 mostrarMenuDeOpcionesDeJueves()
 
 function mostrarOpcionMasVotada(){
-   let input5  = document.getElementById("votacion")
-   input5.addEventListener("input", () => {
-   console.log(input5.value)
-   })
-   let entrada = localStorage.setItem("opcionMasVotada");                        //prompt("Clase dedicada a receta: Comun, Sintacc o Veggie. La clase se basara en la opcion mas votada.").toLowerCase();
+   let input  = document.getElementById("votacion")
+   input.addEventListener("input", () => 
+   console.log(input.value));
+   
+   let entrada = localStorage.setItem("opcionMasVotada", "tipo");
+   console.log(entrada);
    let fallos= 0;
    switch (entrada) {
       case "comun":
-         //alert("Perfecto.");
-         mostrarfinalizacionDelFormulario();
          break;
       case "sintacc":
-         //alert("Genial.");
-         mostrarfinalizacionDelFormulario();
-         break;
+        break;
       case "veggie":
-         //alert("Excelente.");
-         mostrarfinalizacionDelFormulario();
          break;
       default:
-         alert("Su respuesta no es valida.");
          mostrarOpcionMasVotada();
          fallos +=1;
          break;
@@ -104,26 +85,25 @@ mostrarOpcionMasVotada()
 
 function mostrarfinalizacionDelFormulario(){
    for (let i = 1; i <= 101; i++) {
-      let asignarCupo = localStorage.setItem("cupos");                       //prompt("Ingresar correo electronico.");
+      let asignarCupo = localStorage.setItem("cupos");                     
       alert("Usted ha sido registrado exitosamente. Cupo nro "+i +" correo: " + asignarCupo);
-      solicitarNombreYApellido();
    } 
 }
- 
-let miFormulario = document.getElementById("boton");
-miFormulario.addEventListener("submit", validarFormulario);
+mostrarfinalizacionDelFormulario()
 
-function validarFormulario(e){
+
+let miFormulario = document.getElementById("formulario");
+miFormulario.addEventListener("submit", (e) => {
    e.preventDefault();
-   alert("Formulario Enviado");
-   let formulario = e.target
-   console.log(formulario.children["name"].value); 
-   console.log(formulario.children["dia"].value);  
-   console.log(formulario.children["horario"].value); 
-   console.log(formulario.children["dia"].value); 
-   console.log(formulario.children["votacion"].value);
-   console.log(formulario.children["submit"].value); 
-}
+   
+let inputs = e.target.children;
+console.log(inputs.children["name"].value); 
+console.log(inputs.children["dia"].value);  
+console.log(inputs.children["horario"].value); 
+console.log(inputs.children["dia"].value); 
+console.log(inputs.children["votacion"].value);
+console.log(inputs.children["submit"].value); 
+});
 
 const inscriptosMartes = [ "susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
     "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa"];
