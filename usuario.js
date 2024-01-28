@@ -119,54 +119,17 @@ console.log(formulario.children["submit"].value);
 
 //VERIFICACION DE INSCRIPCION
 
-let input6  = document.getElementById("userName")
-input6.addEventListener(`input6`, () => {
-console.log(input6.value)
-})
-
-let input7  = document.getElementById("correo")
-input7.addEventListener(`input7`, () => {
-console.log(input7.value)
-})
-
-let boton = document.getElementById("botonDeVerificacion");
-boton.addEventListener("submit", validarFormulario);
-function validarFormulario(){
-   console.log("Validar Formulario");
-}
-
 const inscriptos = ["susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
  "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa", "ramiro", "guillermo", "ayelen", "christian", "lidia", "sabrina","cecilia"];
  let verificar = prompt ("Verificacion de solicitud. Ingrese el nombre a buscar:");
- if(inscriptos.includes(verificar)){
+ /*if(inscriptos.includes(verificar)){
    alert("Inscripto/a.");
  }else {
    alert("No inscripto/a.");
-   }
+   }*/
 verificar = prompt("Verificacion de solicitud. Ingrese el nombre a buscar:");
-
-// ARRAYS Y OBJETOS
-
-const inscriptosMartes = [ "susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
-    "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa"];
-    inscriptosMartes.push("elena");
-console.log(inscriptosMartes);
- 
-    inscriptosMartes.shift("susana");
-console.log(inscriptosMartes);
- 
-const todosLosInscriptos = ["susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
- "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa", "ramiro", "guillermo", "ayelen", "christian", "lidia", "sabrina","cecilia"];
- 
-console.log(todosLosInscriptos.indexOf("sofia"));
-console.log(todosLosInscriptos.indexOf("cecilia"));
-
- 
-const recetaSalada= ["jueves-receta salada"]
-const inscriptosJueves = ["ramiro", "guillermo", "ayelen", "christian", "lidia", "sabrina","cecilia"];
- 
-const varios= recetaSalada.concat(inscriptosJueves);
-console.log(varios);
+//USO DEL OPERADOR TERNARIO
+(inscriptos.includes(verificar)) ? alert("Inscripto/a.") : alert("No inscripto/a.")
 
 const inscripciones = [
    {nombre: "susana", dia: "martes", horario: 10, receta: "salada"},
@@ -191,6 +154,29 @@ encontrados.forEach(item => {
    );
 })
  
+// ARRAYS Y OBJETOS
+
+const inscriptosMartes = [ "susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
+    "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa"];
+    inscriptosMartes.push("elena");
+console.log(inscriptosMartes);
+ 
+    inscriptosMartes.shift("susana");
+console.log(inscriptosMartes);
+ 
+const todosLosInscriptos = ["susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
+ "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa", "ramiro", "guillermo", "ayelen", "christian", "lidia", "sabrina","cecilia"];
+ 
+console.log(todosLosInscriptos.indexOf("sofia"));
+console.log(todosLosInscriptos.indexOf("cecilia"));
+
+ 
+const recetaSalada= ["jueves-receta salada"]
+const inscriptosJueves = ["ramiro", "guillermo", "ayelen", "christian", "lidia", "sabrina","cecilia"];
+ 
+const varios= recetaSalada.concat(inscriptosJueves);
+console.log(varios);
+
 const claseMartes = new Date ("january 16, 2024");
 console.log(claseMartes);
 console.log(claseMartes.getFullYear());
@@ -198,6 +184,7 @@ const hoy = new Date ("january 12, 2024");
 const miliSegundosPorDia = 86400000
 console.log((claseMartes - hoy) / miliSegundosPorDia);
 
+//STORAGE JSON
 
 let inscripto = localStorage.getItem("nombre");
 console.log("nombre");
@@ -210,6 +197,13 @@ console.log(persona2Json);
 let persona3 = {nombre: "carlos", dia:"martes", horario: 10, receta:"salada"};
 let persona3Json = JSON.stringify(persona3)
 console.log(persona3Json);
+let persona4 = {nombre: "melisa", dia: "martes", horario: 10, receta: "salada"};
+let persona4Json = JSON.stringify(persona4)
+console.log(persona4Json);
+let persona5 = {nombre: "guillermo", dia: "jueves", horario: 12, receta: "dulce"};
+let persona5Json = JSON.stringify(persona5)
+console.log(persona5Json);
+
 
 
 
