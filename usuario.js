@@ -1,23 +1,16 @@
-function solicitarNombreApellido(){
-   let input  = document.getElementById("name")
-   input.addEventListener("input", () =>
-   console.log(input.value));
+//FORMULARIO DE INSCRIPCION
 
-   let solicitarNombreApellido = localStorage.setItem("createUser", "name");
-   console.log(solicitarNombreApellido);
-   if ((nombreYApellido =! " ")){
-      } else {
-   }
-}
-solicitarNombreApellido()
+let input1  = document.getElementById("nombre")
+input1.addEventListener(`input1`, () => {
+console.log(input1.value)
+})
 
+let input2  = document.getElementById("dia")
+input2.addEventListener(`input2`, () => {
+console.log(input2.value)
+})
 
-//PROFE: ACA LE DI UN EJEMPLO UTILIZANDO LA FUNCION DE ARRIBA SOBRE EL USO DEL OPERADOR TERNARIO.
-/*let nombreApellido = prompt ("Ingresar nombre y apellido.").toLowerCase();
-nombreApellido.trim != "" ? alert("Nombre y Apellido: " + nombreApellido) : alert("¡Nombre y Apellido obligatorio!");
-*/
-
-function mostrarMenuDeInscripcion(){
+/*function mostrarMenuDeInscripcion(){
    let input  = document.getElementById("dia")
    input.addEventListener("input",  () =>
    console.log(input.value));
@@ -29,8 +22,14 @@ function mostrarMenuDeInscripcion(){
     }
 }
 mostrarMenuDeInscripcion()
+*/
 
-function mostrarMenuDeOpcionesDeMartes(){
+let input3  = document.getElementById("horario")
+input3.addEventListener(`input3`, () => {
+console.log(input3.value)
+})
+
+/*function mostrarMenuDeOpcionesDeMartes(){
    let input  = document.getElementById("horario");
    input.addEventListener("input", () => 
    console.log(input.value));
@@ -59,8 +58,14 @@ function mostrarMenuDeOpcionesDeJueves(){
    }
 }
 mostrarMenuDeOpcionesDeJueves()
+*/
 
-function mostrarOpcionMasVotada(){
+let input4  = document.getElementById("votacion")
+input4.addEventListener(`input4`, () => {
+console.log(input4.value)
+})
+
+/*function mostrarOpcionMasVotada(){
    let input  = document.getElementById("votacion")
    input.addEventListener("input", () => 
    console.log(input.value));
@@ -82,28 +87,65 @@ function mostrarOpcionMasVotada(){
    }
 }
 mostrarOpcionMasVotada()
+*/
 
-function mostrarfinalizacionDelFormulario(){
+let input5  = document.getElementById("email")
+input5.addEventListener(`input5`, () => {
+console.log(input5.value)
+})
+
+/*function mostrarfinalizacionDelFormulario(){
    for (let i = 1; i <= 101; i++) {
       let asignarCupo = localStorage.setItem("cupos");                     
       alert("Usted ha sido registrado exitosamente. Cupo nro "+i +" correo: " + asignarCupo);
    } 
 }
 mostrarfinalizacionDelFormulario()
-
+*/
 
 let miFormulario = document.getElementById("formulario");
-miFormulario.addEventListener("submit", (e) => {
+miFormulario.addEventListener("submit", validarFormulario);
+
+function validarFormulario(e){
    e.preventDefault();
-   
-let inputs = e.target.children;
-console.log(inputs.children["name"].value); 
-console.log(inputs.children["dia"].value);  
-console.log(inputs.children["horario"].value); 
-console.log(inputs.children["dia"].value); 
-console.log(inputs.children["votacion"].value);
-console.log(inputs.children["submit"].value); 
-});
+   let formulario = e.target
+console.log(formulario.children["name"].value); 
+console.log(formulario.children["dia"].value);  
+console.log(formulario.children["horario"].value); 
+console.log(formulario.children["dia"].value); 
+console.log(formulario.children["votacion"].value);
+console.log(formulario.children["submit"].value);    
+}
+
+//VERIFICACION DE INSCRIPCION
+
+let input6  = document.getElementById("userName")
+input6.addEventListener(`input6`, () => {
+console.log(input6.value)
+})
+
+let input7  = document.getElementById("correo")
+input7.addEventListener(`input7`, () => {
+console.log(input7.value)
+})
+
+let boton = document.getElementById("botonDeVerificacion");
+boton.addEventListener("submit", validarFormulario);
+function validarFormulario(){
+   console.log("Validar Formulario");
+}
+
+const inscriptos = ["susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
+ "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa", "ramiro", "guillermo", "ayelen", "christian", "lidia", "sabrina","cecilia"];
+ let verificar = prompt ("Verificacion de solicitud. Ingrese el nombre a buscar:");
+ if(inscriptos.includes(verificar)){
+   alert("Inscripto/a.");
+ }else {
+   alert("No inscripto/a.");
+   }
+verificar = prompt("Verificacion de solicitud. Ingrese el nombre a buscar:");
+
+// ARRAYS Y OBJETOS
 
 const inscriptosMartes = [ "susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
     "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa"];
@@ -125,17 +167,6 @@ const inscriptosJueves = ["ramiro", "guillermo", "ayelen", "christian", "lidia",
  
 const varios= recetaSalada.concat(inscriptosJueves);
 console.log(varios);
-
-const inscriptos = ["susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
- "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa", "ramiro", "guillermo", "ayelen", "christian", "lidia", "sabrina","cecilia"];
- let verificar = prompt ("Verificacion de solicitud. Ingrese el nombre a buscar:");
- if(inscriptos.includes(verificar)){
-   alert("Inscripto/a.");
- }else {
-   alert("No inscripto/a.");
-   }
-verificar = prompt("Verificacion de solicitud. Ingrese el nombre a buscar:");
-
 
 const inscripciones = [
    {nombre: "susana", dia: "martes", horario: 10, receta: "salada"},
@@ -170,13 +201,15 @@ console.log((claseMartes - hoy) / miliSegundosPorDia);
 
 let inscripto = localStorage.getItem("nombre");
 console.log("nombre");
-let persona1 = {nombre: "susana", dia: "martes"};
+let persona1 = {nombre: "susana", dia: "martes", horario: 10, receta: "salada"};
 let persona1Json = JSON.stringify(persona1)
 console.log(persona1Json);
-let persona2 = {nombre: "sofia", dia: "martes"};
+let persona2 = {nombre: "sofia", dia: "martes", horario: 12, receta: "dulce"};
 let persona2Json = JSON.stringify(persona2)
 console.log(persona2Json);
-
+let persona3 = {nombre: "carlos", dia:"martes", horario: 10, receta:"salada"};
+let persona3Json = JSON.stringify(persona3)
+console.log(persona3Json);
 
 
 
