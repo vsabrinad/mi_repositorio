@@ -1,124 +1,57 @@
 //FORMULARIO DE INSCRIPCION
+console.log(document);
 
-let input1  = document.getElementById("nombre")
-input1.addEventListener(`input1`, () => {
-console.log(input1.value)
+let solicitarNombre  = document.getElementById("nombre")
+solicitarNombre.addEventListener(`solicitarNombre`, () => {
+localStorage.setItem('solcitarNombre', solicitarNombre.value)
 })
 
-let input2  = document.getElementById("dia")
-input2.addEventListener(`input2`, () => {
-console.log(input2.value)
+let elegirDia  = document.getElementById("dia")
+elegirDia.addEventListener(`elegirDia`, () => {
+   localStorage.setItem('solcitarNombre', elegirDia.value)
 })
 
-/*function mostrarMenuDeInscripcion(){
-   let input  = document.getElementById("dia")
-   input.addEventListener("input",  () =>
-   console.log(input.value));
-
-   let inscripcion =  localStorage.setItem("menuDeInscripcion", "dia"); 
-   console.log(inscripcion);             
-   if ((inscripcion.trim === "martes")){
-   } else ((inscripcion.trim === "jueves")); {
-    }
-}
-mostrarMenuDeInscripcion()
-*/
-
-let input3  = document.getElementById("horario")
-input3.addEventListener(`input3`, () => {
-console.log(input3.value)
+let elegirHorario  = document.getElementById("horario")
+elegirHorario.addEventListener(`elegirHorario`, () => {
+console.log(elegirHorario.value)
 })
 
-/*function mostrarMenuDeOpcionesDeMartes(){
-   let input  = document.getElementById("horario");
-   input.addEventListener("input", () => 
-   console.log(input.value));
-
-   let mensaje = localStorage.setItem("opcionesMartes", "horario");
-   console.log(mensaje);
-   if (mensaje.trim === "receta dulce") {
-   } else if (mensaje.trim === "receta salada") {
-   } else {
-      alert("Opcion incorrecta (receta dulce/ receta salada).");
-   }
-}
-mostrarMenuDeOpcionesDeMartes()
-
-function mostrarMenuDeOpcionesDeJueves(){
-   let input  = document.getElementById("horario")
-   input.addEventListener("input", () => 
-   console.log(input.value));
-   
-   let mensaje = localStorage.setItem("opcionJueves", "horario")
-   console.log(mensaje);                   
-   if (mensaje === "receta dulce") {
-   } else if (mensaje === "receta salada") {
-   } else {
-     alert ("Opcion incorrecta. Elija receta dulce o receta salada, por favor.)"); 
-   }
-}
-mostrarMenuDeOpcionesDeJueves()
-*/
-
-let input4  = document.getElementById("votacion")
-input4.addEventListener(`input4`, () => {
-console.log(input4.value)
+let votar  = document.getElementById("votacion")
+votar.addEventListener(`votar`, () => {
+console.log(votar.value)
 })
 
-/*function mostrarOpcionMasVotada(){
-   let input  = document.getElementById("votacion")
-   input.addEventListener("input", () => 
-   console.log(input.value));
-   
-   let entrada = localStorage.setItem("opcionMasVotada", "tipo");
-   console.log(entrada);
-   let fallos= 0;
-   switch (entrada) {
-      case "comun":
-         break;
-      case "sintacc":
-        break;
-      case "veggie":
-         break;
-      default:
-         mostrarOpcionMasVotada();
-         fallos +=1;
-         break;
-   }
-}
-mostrarOpcionMasVotada()
-*/
-
-let input5  = document.getElementById("email")
-input5.addEventListener(`input5`, () => {
-console.log(input5.value)
+let ingresarEmail  = document.getElementById("email")
+ingresarEmail.addEventListener(`ingresarEmail`, () => {
+console.log(ingresarEmail.value)
 })
 
-/*function mostrarfinalizacionDelFormulario(){
-   for (let i = 1; i <= 101; i++) {
-      let asignarCupo = localStorage.setItem("cupos");                     
-      alert("Usted ha sido registrado exitosamente. Cupo nro "+i +" correo: " + asignarCupo);
-   } 
-}
-mostrarfinalizacionDelFormulario()
-*/
 
 let miFormulario = document.getElementById("formulario");
 miFormulario.addEventListener("submit", validarFormulario);
 
+
+let validacion = document.getElementById("validacion");
+
 function validarFormulario(e){
+   console.log("validar");
    e.preventDefault();
-   let formulario = e.target
-console.log(formulario.children["name"].value); 
-console.log(formulario.children["dia"].value);  
-console.log(formulario.children["horario"].value); 
-console.log(formulario.children["dia"].value); 
-console.log(formulario.children["votacion"].value);
-console.log(formulario.children["submit"].value);    
+   if (!solicitarNombre.value) {
+      validacion.innerHTML = `<p>Nombre es requerido</p>`;
+   }
+   if (elegirDia.value !== 'martes' || elegirDia.value !== 'jueves') {
+      validacion.innerHTML = `<p>Dia debe ser Martes o Jueves</p>`;
+   }
+
+   if (!ingresarEmail.value) {
+      alert('Email requerido')
+   }
+   console.log(solicitarNombre.value);
+   return false
 }
 
 //VERIFICACION DE INSCRIPCION
-
+/*
 const inscriptos = ["susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
  "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa", "ramiro", "guillermo", "ayelen", "christian", "lidia", "sabrina","cecilia"];
  let verificar = prompt ("Verificacion de solicitud. Ingrese el nombre a buscar:");
@@ -127,7 +60,7 @@ const inscriptos = ["susana", "carlos", "sofia", "marcelo", "rocio", "paula", "s
  }else {
    alert("No inscripto/a.");
    }*/
-verificar = prompt("Verificacion de solicitud. Ingrese el nombre a buscar:");
+/*verificar = prompt("Verificacion de solicitud. Ingrese el nombre a buscar:");
 //USO DEL OPERADOR TERNARIO
 (inscriptos.includes(verificar)) ? alert("Inscripto/a.") : alert("No inscripto/a.")
 
@@ -153,7 +86,7 @@ encontrados.forEach(item => {
     Dia: ${item.dia}`
    );
 })
- 
+ */
 // ARRAYS Y OBJETOS
 
 const inscriptosMartes = [ "susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
