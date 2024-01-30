@@ -1,67 +1,67 @@
-//FORMULARIO DE INSCRIPCION
 console.log(document);
 
 let solicitarNombre  = document.getElementById("nombre")
 solicitarNombre.addEventListener(`solicitarNombre`, () => {
-localStorage.setItem('solcitarNombre', solicitarNombre.value)
+   localStorage.setItem('solcitarNombre', solicitarNombre.value)
 })
 
 let elegirDia  = document.getElementById("dia")
 elegirDia.addEventListener(`elegirDia`, () => {
-   localStorage.setItem('solcitarNombre', elegirDia.value)
+   localStorage.setItem('elegirDia', elegirDia.value)
 })
 
 let elegirHorario  = document.getElementById("horario")
 elegirHorario.addEventListener(`elegirHorario`, () => {
-console.log(elegirHorario.value)
+ localStorage.setItem('elegirHorario', elegirHorario.value)
 })
 
 let votar  = document.getElementById("votacion")
 votar.addEventListener(`votar`, () => {
-console.log(votar.value)
+ localStorage.setItem('votar', votar.value)
 })
 
 let ingresarEmail  = document.getElementById("email")
 ingresarEmail.addEventListener(`ingresarEmail`, () => {
-console.log(ingresarEmail.value)
+ localStorage.setItem('ingresarEmail', ingresarEmail.value)
 })
-
 
 let miFormulario = document.getElementById("formulario");
 miFormulario.addEventListener("submit", validarFormulario);
-
-
-let validacion = document.getElementById("validacion");
-
+let validacion1 = document.getElementById("validacion1");
+let validacion2 = document.getElementById("validacion2");
+let validacion3 = document.getElementById("validacion3");
+let validacion4 = document.getElementById("validacion4");
+let validacion5 = document.getElementById("validacion5");
 function validarFormulario(e){
    console.log("validar");
    e.preventDefault();
    if (!solicitarNombre.value) {
-      validacion.innerHTML = `<p>Nombre es requerido</p>`;
+      validacion1.innerHTML = `<p>¡Nombre y apellido obligatorio!</p>`;
    }
    if (elegirDia.value !== 'martes' || elegirDia.value !== 'jueves') {
-      validacion.innerHTML = `<p>Dia debe ser Martes o Jueves</p>`;
+      validacion2.innerHTML = `<p>Ingrese martes o jueves.</p>`;
    }
-
+   if (elegirHorario.value !== '10' || elegirHorario.value !== '12') {
+      validacion3.innerHTML = `<p>Escriba el numero: 10/12.</p>`;
+   }
+   if (votar.value !== 'sintacc' || votar.value !== 'comun' || votar.value !=='veggie' ) {
+      validacion4.innerHTML = `<p>Ingrese sintacc, comun o veggie por favor.</p>`;
+   } 
    if (!ingresarEmail.value) {
-      alert('Email requerido')
+      validacion5.innerHTML = `<p>Escriba su correo electronico.</p>`;
    }
    console.log(solicitarNombre.value);
+   console.log(elegirDia.value);
+   console.log(elegirHorario.value);
+   console.log(votar.value);
+   console.log(ingresarEmail.value);
    return false
 }
 
 //VERIFICACION DE INSCRIPCION
-/*
-const inscriptos = ["susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
+/*const inscriptos = ["susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
  "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa", "ramiro", "guillermo", "ayelen", "christian", "lidia", "sabrina","cecilia"];
  let verificar = prompt ("Verificacion de solicitud. Ingrese el nombre a buscar:");
- /*if(inscriptos.includes(verificar)){
-   alert("Inscripto/a.");
- }else {
-   alert("No inscripto/a.");
-   }*/
-/*verificar = prompt("Verificacion de solicitud. Ingrese el nombre a buscar:");
-//USO DEL OPERADOR TERNARIO
 (inscriptos.includes(verificar)) ? alert("Inscripto/a.") : alert("No inscripto/a.")
 
 const inscripciones = [
@@ -80,15 +80,14 @@ guardarLocal("inscripciones", JSON.stringify(inscripciones));
 let dia = String(prompt("Para saber dia de su clase. Ingrese su nombre por favor:"));
 const encontrados = inscripciones.filter(item => item.dia = "martes");
  
-encontrados.forEach(item => {
+encontrados.filter(item => {
    alert(
      `Nombre: ${item.nombre} 
-    Dia: ${item.dia}`
+      Dia: ${item.dia}`
    );
 })
- */
+*/
 // ARRAYS Y OBJETOS
-
 const inscriptosMartes = [ "susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
     "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa"];
     inscriptosMartes.push("elena");
@@ -118,7 +117,6 @@ const miliSegundosPorDia = 86400000
 console.log((claseMartes - hoy) / miliSegundosPorDia);
 
 //STORAGE JSON
-
 let inscripto = localStorage.getItem("nombre");
 console.log("nombre");
 let persona1 = {nombre: "susana", dia: "martes", horario: 10, receta: "salada"};
