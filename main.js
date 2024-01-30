@@ -2,7 +2,7 @@ console.log(document);
 
 let solicitarNombre  = document.getElementById("nombre")
 solicitarNombre.addEventListener(`solicitarNombre`, () => {
-   localStorage.setItem('solcitarNombre', solicitarNombre.value)
+   localStorage.setItem('solicitarNombre', solicitarNombre.value)
 })
 
 let elegirDia  = document.getElementById("dia")
@@ -38,14 +38,15 @@ function validarFormulario(e){
    if (!solicitarNombre.value) {
       validacion1.innerHTML = `<p>¡Nombre y apellido obligatorio!</p>`;
    }
-   if (elegirDia.value !== 'martes' || elegirDia.value !== 'jueves') {
-      validacion2.innerHTML = `<p>Ingrese martes o jueves.</p>`;
+   if (!elegirDia.value){
+      validacion2innerHTML = `<p>Ingrese martes o jueves.</p>`;
    }
-   if (elegirHorario.value !== '10' || elegirHorario.value !== '12') {
+   if (!elegirHorario.value){
       validacion3.innerHTML = `<p>Escriba el numero: 10/12.</p>`;
    }
-   if (votar.value !== 'sintacc' || votar.value !== 'comun' || votar.value !=='veggie' ) {
+   if (!votar.value){
       validacion4.innerHTML = `<p>Ingrese sintacc, comun o veggie por favor.</p>`;
+   validacion4.innerHTML = `<p>Ingrese sintacc, comun o veggie por favor.</p>`;
    } 
    if (!ingresarEmail.value) {
       validacion5.innerHTML = `<p>Escriba su correo electronico.</p>`;
@@ -58,6 +59,16 @@ function validarFormulario(e){
    return false
 }
 
+const boton = document.querySelector('#boton')
+boton.addEventListener('click', () => {
+   Swal.fire({
+      title: "¡Excelente!",
+      text: "Tu inscripcion se ha registrado exitosamente.",
+      icon: "success",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+})
 //VERIFICACION DE INSCRIPCION
 /*const inscriptos = ["susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
  "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa", "ramiro", "guillermo", "ayelen", "christian", "lidia", "sabrina","cecilia"];
@@ -88,7 +99,7 @@ encontrados.filter(item => {
 })
 */
 // ARRAYS Y OBJETOS
-const inscriptosMartes = [ "susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
+/*const inscriptosMartes = [ "susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
     "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa"];
     inscriptosMartes.push("elena");
 console.log(inscriptosMartes);
@@ -134,9 +145,4 @@ console.log(persona4Json);
 let persona5 = {nombre: "guillermo", dia: "jueves", horario: 12, receta: "dulce"};
 let persona5Json = JSON.stringify(persona5)
 console.log(persona5Json);
-
-
-
-
-
-
+*/
