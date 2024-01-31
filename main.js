@@ -161,7 +161,25 @@ futuro(true)
 })
 
 //FETCH
+const publicacion = document.querySelector('#publicacion')
 fetch('https://www.clarin.com/api/contentsCover/20240130')
-.then(response => response.json())
-.then(result => console.log())
+.then((response) => response.json())
+.then((data) => {
+   data.forEach((post) => {
+      const div = document.createElement('#publicacion')
+      div.innerHTML = `
+      <h4>${post.title}</h4>
+      <p>${post.body}</p>
+  `
+  document.body.append(div);
+})
+.catch((error) => {
+      let div = document.createElement("div");
+      div.innerHTML = error;
+      document.body.append(div);
+   })
+
+})
+
+
 
