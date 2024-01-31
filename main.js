@@ -1,5 +1,3 @@
-console.log(document);
-
 let solicitarNombre  = document.getElementById("nombre")
 solicitarNombre.addEventListener(`solicitarNombre`, () => {
    localStorage.setItem('solicitarNombre', solicitarNombre.value)
@@ -70,7 +68,7 @@ boton.addEventListener('click', () => {
     });
 })
 //VERIFICACION DE INSCRIPCION
-/*const inscriptos = ["susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
+const inscriptos = ["susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
  "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa", "ramiro", "guillermo", "ayelen", "christian", "lidia", "sabrina","cecilia"];
  let verificar = prompt ("Verificacion de solicitud. Ingrese el nombre a buscar:");
 (inscriptos.includes(verificar)) ? alert("Inscripto/a.") : alert("No inscripto/a.")
@@ -97,9 +95,9 @@ encontrados.filter(item => {
       Dia: ${item.dia}`
    );
 })
-*/
+
 // ARRAYS Y OBJETOS
-/*const inscriptosMartes = [ "susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
+const inscriptosMartes = [ "susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
     "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa"];
     inscriptosMartes.push("elena");
 console.log(inscriptosMartes);
@@ -145,4 +143,25 @@ console.log(persona4Json);
 let persona5 = {nombre: "guillermo", dia: "jueves", horario: 12, receta: "dulce"};
 let persona5Json = JSON.stringify(persona5)
 console.log(persona5Json);
-*/
+
+//PROMESAS
+function futuro(value) {
+   return new Promise((resolve, reject) => {
+      setTimeout(() => {
+         value ? resolve({nombre: "melisa", dia:"martes", horario: 10}) : reject("El sistema se ha caido, por favor intente luego.");
+      }, 2500);
+   });
+}
+futuro(true)
+.then((response) => console.log(response))
+.catch((error) => {
+   let div = document.createElement("div");
+   div.innerHTML = error;
+   document.body.append(div);
+})
+
+//FETCH
+fetch('https://www.clarin.com/api/contentsCover/20240130')
+.then(response => response.json())
+.then(result => console.log())
+
