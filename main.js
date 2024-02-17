@@ -86,16 +86,6 @@ const inscripciones = [
 const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
 guardarLocal("inscripciones", JSON.stringify(inscripciones));
 
-/*let dia = String(prompt("Para saber dia de su clase. Ingrese su nombre por favor:"));
-const encontrados = inscripciones.filter(item => item.dia = "martes");
- 
-encontrados.filter(item => {
-   alert(
-     `Nombre: ${item.nombre} 
-      Dia: ${item.dia}`
-   );
-})
-*/
 // ARRAYS Y OBJETOS
 const inscriptosMartes = [ "susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
     "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa"];
