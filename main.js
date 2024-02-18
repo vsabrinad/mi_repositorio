@@ -64,9 +64,10 @@ boton.addEventListener('click', () => {
       text: "Tu inscripcion se ha registrado exitosamente.",
       icon: "success",
       showConfirmButton: false,
-      timer: 1500,
-    });
+      timer: 2500,
+   })
 })
+
 //VERIFICACION DE INSCRIPCION
 const inscriptos = ["susana", "carlos", "sofia", "marcelo", "rocio", "paula", "silvia", "omar", 
  "gustavo", "alan", "sebastian", "carla", "ariel", "nadia", "melisa", "ramiro", "guillermo", "ayelen", "christian", "lidia", "sabrina","cecilia"];
